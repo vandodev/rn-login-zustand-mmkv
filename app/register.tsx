@@ -3,7 +3,13 @@ import { StyleSheet, Text, View } from "react-native"
 
 const RegisterScreen = () => {
     return(
-        <View>
+        <View
+            style={{
+                flex: 1,
+                justifyContent: "center",
+                alignItems: "center",
+            }}
+        >
             <Text>Tela de Registro</Text>
         </View>
     )
