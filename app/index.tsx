@@ -1,11 +1,13 @@
 // app/index.tsx
+import { router } from "expo-router";
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { Button, StyleSheet, View } from "react-native";
 
 export default function Home() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Olá — Home</Text>   
+      <Button title="Login" onPress={() => router.push("/login")}/>
+      <Button title="Registro" onPress={() => router.push("/register")}/>
     </View>
   );
 }
@@ -16,13 +18,5 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     padding: 16,
-  },
-  title: {
-    fontSize: 22,
-    marginBottom: 16,
-    justifyContent: "center",
-    textAlign:"center",
-    marginTop: 5
-    
-  },
+  }
 });
