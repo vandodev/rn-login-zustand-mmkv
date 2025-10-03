@@ -1,7 +1,7 @@
 import { Stack } from "expo-router";
 
 export default function Layout() {
-  const isAltenticated = true
+  const isAltenticated = false
   return (  
     <Stack>
 
