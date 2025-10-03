@@ -1,14 +1,18 @@
 import { useAuthStore } from "@/store/authStore"
 import React, { useState } from "react"
-import { Button, StyleSheet, Text, TextInput, View } from "react-native"
+import { Alert, Button, StyleSheet, Text, TextInput, View } from "react-native"
 
 const LoginScreen = () => {
-    const [userName, setUsername] = useState("")
-    const [passWord, setPassWord] =  useState("")
+    const [username, setUsername] = useState("")
+    const [password, setPassWord] =  useState("")
     const { Login } = useAuthStore()
 
-    const HandleLogin = () => {
-        Login();
+    const handleLogin = async () => {
+      const success = await Login(username,password);
+
+      if(!success){
+        Alert.alert("Erro",'Credenciais inválidas')
+      }
     }
 
     return(
@@ -16,7 +20,7 @@ const LoginScreen = () => {
 
             <Text>Nome de usuário</Text>
             <TextInput
-                value={userName} 
+                value={username} 
                 onChangeText={setUsername} 
                 placeholder="Nome de osoário" 
                 style={styles.input}
@@ -24,14 +28,14 @@ const LoginScreen = () => {
 
             <Text>Senha</Text>
             <TextInput 
-                value={passWord} 
+                value={password} 
                 onChangeText={setPassWord} 
                 placeholder="Senha" 
                 secureTextEntry 
                 style={styles.input}
             />
 
-            <Button title="Entrar"  onPress={HandleLogin}/>
+            <Button title="Entrar"  onPress={handleLogin}/>
         
         </View>
     )
