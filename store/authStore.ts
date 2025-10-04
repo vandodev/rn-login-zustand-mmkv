@@ -33,7 +33,16 @@ export const useAuthStore = create<AuthStore>((set, get) => ({
             }
 
             const data = await response.json();
-            console.log(data);
+            // console.log(data);
+
+            const authData = {
+                isAuthenticated: true,
+                accessToken: data.accessToken,
+                refreshToken: data.refreshToken,
+                user: data,
+                accessTokenExpiration: Date.now() + (60 * 60 * 10000)
+            }
+            set(authData)
             return true;
         } catch(error){
             console.error(error)
@@ -41,5 +50,12 @@ export const useAuthStore = create<AuthStore>((set, get) => ({
         }
     },
 
-    Logout: () => set({isAuthenticated: false}),
+    Logout: () => 
+        set({
+            isAuthenticated: false,
+            accessToken: null,
+            refreshToken: null,
+            user: null,
+            accessTokenExpiration: null
+        }),
 }))

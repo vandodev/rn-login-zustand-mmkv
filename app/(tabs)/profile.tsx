@@ -7,7 +7,7 @@ const Page = () => {
     return(
         <View>
             <Text>Tela perfil</Text>
-            <Button title="Logout"/>
+            <Button title="Logout" onPress={Logout}/>
         </View>
     )
 }
