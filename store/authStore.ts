@@ -1,4 +1,5 @@
 import { create } from "zustand"
+import { removeItem, setItem } from './storange'
 
 interface AuthStore {
     isAuthenticated: boolean
@@ -42,6 +43,9 @@ export const useAuthStore = create<AuthStore>((set, get) => ({
                 user: data,
                 accessTokenExpiration: Date.now() + (60 * 60 * 10000)
             }
+
+            setItem("auth", authData)
+
             set(authData)
             return true;
         } catch(error){
@@ -50,12 +54,14 @@ export const useAuthStore = create<AuthStore>((set, get) => ({
         }
     },
 
-    Logout: () => 
+    Logout: async () => {
+        removeItem('auth')
         set({
             isAuthenticated: false,
             accessToken: null,
             refreshToken: null,
             user: null,
             accessTokenExpiration: null
-        }),
+        })
+    }
 }))
