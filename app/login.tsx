@@ -24,6 +24,7 @@ const LoginScreen = () => {
                 onChangeText={setUsername} 
                 placeholder="Nome de osoário" 
                 style={styles.input}
+                autoCapitalize="none"
              />
 
             <Text>Senha</Text>
