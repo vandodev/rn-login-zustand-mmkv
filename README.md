@@ -26,7 +26,7 @@ Este projeto serve como base para aplicações mobile que necessitam de autentic
 
 ### Melhorias Mobile
 
-- [ ] Tipar retorno de dados de usuários
+- [x] Tipar retorno de dados de usuários
 - [ ] Colocar icones nas abas
 - [ ] Apresentar layout no read.me
 

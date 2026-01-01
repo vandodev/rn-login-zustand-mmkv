@@ -1,11 +1,12 @@
 import { create } from "zustand"
 import { getItem, removeItem, setItem } from './storange'
+import { User } from "@/types/User"
 
 interface AuthStore {
     isAuthenticated: boolean
     accessToken: string | null
     refreshToken: string | null
-    user: object | null
+    user: User | null
     accessTokenExpiration: number | null
     Login: (username: string, password: string) => Promise<boolean>
     refreshAccessToken: () => Promise<boolean>
