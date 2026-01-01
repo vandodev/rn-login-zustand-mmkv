@@ -1,6 +1,35 @@
-# Welcome to your Expo app 👋
+📌 Descrição
+Sistema de Autenticação em React Native com Expo
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Este projeto implementa um sistema completo de autenticação em React Native utilizando Expo, com gerenciamento de estado feito com Zustand e persistência segura de dados usando react-native-mmkv.
+
+A autenticação é baseada em JWT (JSON Web Token), com suporte a Access Token e Refresh Token, garantindo maior segurança e uma experiência fluida para o usuário, mesmo após reiniciar o aplicativo.
+
+🚀 Tecnologias Utilizadas
+
+- React Native
+- Expo
+- Zustand (gerenciamento de estado)
+- react-native-mmkv (armazenamento rápido e seguro)
+- JWT (Access Token + Refresh Token)
+- TypeScript
+
+🔐 Funcionalidades
+
+- Login de usuário
+- Persistência de sessão com MMKV
+- Refresh automático do token
+- Controle de autenticação global via Zustand
+- Estrutura organizada e escalável
+
+Este projeto serve como base para aplicações mobile que necessitam de autenticação moderna, segura e performática.
+
+### Melhorias Mobile
+
+- [ ] Tipar retorno de dados de usuários
+- [ ] Colocar icones nas abas
+- [ ] Apresentar layout no read.me
+
 
 ## Get started
 
