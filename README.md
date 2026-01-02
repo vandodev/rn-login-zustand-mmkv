@@ -28,7 +28,7 @@ Este projeto serve como base para aplicações mobile que necessitam de autentic
 
 - [x] Tipar retorno de dados de usuários
 - [x] Colocar icones nas abas
-- [ ] Configurar safeArea
+- [x] Configurar safeArea
 - [ ] Configurar statusbar
 - [ ] Apresentar layout no read.me
 
