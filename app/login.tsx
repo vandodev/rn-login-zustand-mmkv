@@ -1,6 +1,6 @@
 import { useAuthStore } from "@/store/authStore"
 import React, { useState } from "react"
-import { Alert, Button, StyleSheet, Text, TextInput, View } from "react-native"
+import { Alert, Button, StatusBar, StyleSheet, Text, TextInput, View } from "react-native"
 
 const LoginScreen = () => {
     const [username, setUsername] = useState("")
@@ -17,6 +17,12 @@ const LoginScreen = () => {
 
     return(
         <View style={styles.container}>     
+
+            <StatusBar 
+                        barStyle="dark-content"  // Texto escuro (horas, bateria, etc.)
+                        backgroundColor="#FFFFFF" // Fundo branco
+                        translucent={false}       // Não translúcido (Android)
+                    />
 
             <Text>Nome de usuário</Text>
             <TextInput

@@ -22,7 +22,16 @@ A autenticação é baseada em JWT (JSON Web Token), com suporte a Access Token 
 - Controle de autenticação global via Zustand
 - Estrutura organizada e escalável
 
+## 💻 Projeto
+
 Este projeto serve como base para aplicações mobile que necessitam de autenticação moderna, segura e performática.
+
+## 🎨 Layout
+
+<img alt="01" src="https://github.com/user-attachments/assets/2681e852-65c8-4db2-bf37-b25179d222d2" width="130" />
+<img alt="02" src="https://github.com/user-attachments/assets/eee74b9c-4b28-4493-a78d-94e14c1eb65d" width="130" />
+<img alt="03" src="https://github.com/user-attachments/assets/5ff34656-8048-4cc1-84fc-c13ebd715bc2" width="130" />
+<img alt="04" src="https://github.com/user-attachments/assets/c7ea2c23-22dd-4c3e-81df-543910972b4a"  width="130" />
 
 ### Melhorias Mobile
 
@@ -30,8 +39,7 @@ Este projeto serve como base para aplicações mobile que necessitam de autentic
 - [x] Colocar icones nas abas
 - [x] Configurar safeArea
 - [x] Configurar statusbar
-- [ ] Apresentar layout no read.me
-
+- [x] Apresentar layout no read.me
 
 ## Get started
 
