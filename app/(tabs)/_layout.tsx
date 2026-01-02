@@ -1,7 +1,7 @@
 import { Ionicons } from "@expo/vector-icons";
 import { Tabs } from "expo-router";
 import React from "react";
-import { StyleSheet, View } from "react-native";
+import { StatusBar, StyleSheet, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 
@@ -12,6 +12,13 @@ const TabLayout = () => {
             styles.container,
             { paddingTop: insets.top }
         ]}>
+
+           <StatusBar 
+                barStyle="dark-content"  // Texto escuro (horas, bateria, etc.)
+                backgroundColor="#FFFFFF" // Fundo branco
+                translucent={false}       // Não translúcido (Android)
+            />
+
             <Tabs
                 screenOptions={{
                     tabBarActiveTintColor: "#007AFF", // cor do ícone ativo
